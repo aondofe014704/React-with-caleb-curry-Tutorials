@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Employee from './components/Employee'
 
 function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      { showEmployees  ? (
+      <>
+        <Employee name="Jack Songu" role="Intern"></Employee>
+        <Employee role="Intern"></Employee>
+        </>
+        ) : (
+        <h1>You Cannot see the Employees</h1>
+      )}    
+
     </div>
   );
 }
